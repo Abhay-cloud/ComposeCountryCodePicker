@@ -1,0 +1,6 @@
+jdk:
+  - openjdk11
+before_install:
+  - sdk install java 11.0.20-open  # Install Java 11 (specific version)
+  - sdk use java 11.0.20-open     # Set Java 11 for this build
+  - java -version                 # Verify the installed Java version
