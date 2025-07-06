@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import com.abhaycloud.composeccp.utils.CountryData
 import com.abhaycloud.composeccp.utils.CountryModel
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun CountryPickerBottomSheet(
@@ -65,7 +64,7 @@ internal fun CountryPickerBottomSheet(
                 Spacer(modifier = Modifier.height(8.dp))
 
                 LazyColumn {
-                    items(filteredCountries) { country ->
+                    items(filteredCountries, key = { it.code }) { country ->
                         Box(
                             modifier = Modifier
                                 .fillMaxWidth()

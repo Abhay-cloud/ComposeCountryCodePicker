@@ -10,6 +10,27 @@ import androidx.compose.runtime.setValue
 import com.abhaycloud.composeccp.utils.CountryModel
 import kotlinx.coroutines.launch
 
+/**
+ * A customizable Country Picker composable for Jetpack Compose applications.
+ *
+ *   This composable offers several customization options:
+ * - The main field appearance can be fully customized via the content parameter
+ * - Individual country items in the bottom sheet can be customized
+ * - The search field in the bottom sheet can be customized
+ *
+ * @param selectedCountry The currently selected country to display in the field.
+ * @param onCountrySelected Callback that is invoked when a new country is selected from the bottom sheet.
+ *        It provides the selected [CountryModel] as a parameter.
+ * @param bottomSheetCountryItem Optional composable to define the appearance of each country item in the
+ *        bottom sheet list. Defaults to [DefaultCountryItem].
+ * @param searchField Optional composable to define the appearance and behavior of the search field in the
+ *        bottom sheet. Defaults to [DefaultSearchField].
+ * @param content Optional composable to define the appearance of the country picker field itself.
+ *        It receives the selected [CountryModel] (giving access to code, name, dialCode, and icon) and
+ *        a click handler as parameters. Defaults to [DefaultCountryPickerField].
+ *
+ * @see CountryModel
+ */
 @Composable
 fun CountryPickerField(
     selectedCountry: CountryModel,
