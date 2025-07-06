@@ -2,7 +2,7 @@ package com.abhaycloud.composeccp.utils
 
 import com.abhaycloud.composeccp.R
 
-object CountryData {
+internal object CountryData {
     val countries = listOf(
         CountryModel(code = "AF", name = "Afghanistan", dialCode = "+93", icon = R.drawable.af),
         CountryModel(code = "AX", name = "Aland Islands", dialCode = "+358", icon = R.drawable.ax),
