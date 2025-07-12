@@ -93,10 +93,10 @@ The picker uses a simple data model:
 
 ```kotlin
 data class CountryModel(
-    val code: String,      // e.g., "US", "FR"
-    val name: String,      // e.g., "United States", "France"
-    val dialCode: String,  // e.g., "+1", "+33"
-    val flagEmoji: String  // e.g., "🇺🇸", "🇫🇷"
+    val code: String,     // The ISO code (e.g., "US", "IN")
+    val name: String,     // Full country name in English (e.g., "United States", "India")
+    val dialCode: String, // International dialing code (e.g., "+1", "+91")
+    val icon: Int         // Resource ID pointing to the flag drawable (e.g., R.drawable.flag_us)
 )
 ```
 
